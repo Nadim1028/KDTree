@@ -116,7 +116,7 @@ public class KDTreeMain
         traverseKDTree(node.right);
     }
 
-    public boolean isMatched(Node parent, int point[])
+    public boolean isSimilarValue(Node parent, int point[])
     {
         boolean flag=true;
 
@@ -134,7 +134,7 @@ public class KDTreeMain
             return false;
         }
 
-        if(isMatched(parent,point))
+        if(isSimilarValue(parent,point))
             return true;
 
         if(point[depth % k] < parent.coordinate[depth % k])
